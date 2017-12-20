@@ -1,0 +1,120 @@
+@import 'reset.scss';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Varela+Round');
+
+@import '../bootstrap/scss/bootstrap-grid.scss';
+
+$gris-1 : #666666;
+$verde-1: #10b967;
+$varelaRound: 'Varela Round', sans-serif;
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    &:hover{
+        transition: color 1s;
+    }
+}
+
+header{
+
+    padding: 30px 0;
+    overflow: hidden;
+    .logo{
+        width: 225px;
+        height: 77px;
+        overflow: hidden;
+        float:left;
+
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .top-header{
+        width: calc( 100% - 250px);
+        float:right;
+        display:flex;
+        justify-content:flex-end;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #f2f2f2;
+        margin-bottom: 30px;
+
+        .location{
+            font-size: 14px;
+            color: $gris-1;
+            padding-left: 15px;
+            background: url('../img/ico-pin.jpg') left top no-repeat;
+            
+        }
+    }
+
+    nav{
+        float:right;
+        ul{
+            display:flex;
+            justify-content:flex-end;
+            li{
+                font-size: 14px;
+                text-transform: uppercase;
+                padding: 0 25px;
+
+                &:last-child{
+                    padding-right: 0;
+                }
+
+                a{
+                    color: $gris-1;
+
+                    &.active{
+                        color: $verde-1;
+                    }
+
+                    &:hover{
+                        color: $verde-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#intro{
+    width: 100%;
+    background: url('../img/img-01.jpg') no-repeat center top;
+    height: 500px;
+    background-size: 100% auto;
+    position: relative;
+
+    .text{
+        text-align: right;
+        color: white;
+        padding-top: 200px;
+    }
+
+    h1{
+        font-family: $varelaRound;
+        font-size: 30px;
+        
+    }
+}
+
+
+.sociales{
+    margin-right: 30px;
+    i{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        &.tw{
+            background: url('../img/ico-tw.jpg');
+        }
+        &.fb{
+            background: url('../img/ico-fb.jpg');
+        }
+        &.ins{
+            background: url('../img/ico-ins.jpg');
+        }
+    }
+}
